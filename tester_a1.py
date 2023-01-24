@@ -17,7 +17,6 @@ args = parser.parse_args()
 
 print("--------------------------------------------------------------------")
 print("ECE1779 auto-tester A1")
-
 print("--------------------------------------------------------------------")
 print("checking your web app IP...")
 if not args.ip_addr.startswith('http://'):
