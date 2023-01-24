@@ -1,3 +1,12 @@
 # A1-Student-Tester
 
-test
+This repository consists of:
+- tester_a1.py
+- /images/1.jpeg
+- /images/2.png
+
+
+The purpose of tester_a1.py is to provide you with test cases for some of your application's endpoints, as perscribed in the A1 specifications.
+Test cases such as these, and additional cases, will be used to evaluate your application during demos, so it is important that your endpoints adhere to the inputs and outputs provided here and in the A1 specifications.
+You do not need to submit anything in relation to this provided code. It is only for your own internal testing and evaluation.
+
