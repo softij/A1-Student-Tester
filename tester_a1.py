@@ -192,13 +192,12 @@ if test_4_flag:
     except:
         print("error in test 4: your response cannot be represented in JSON format")
     try: 
-        if jsonResponse["success"] == "true" and jsonResponse["keys"] == ['test_1'] and jsonResponse["content"] != None:
+        if jsonResponse["success"] == "true" and jsonResponse["content"] != None:
             score += 1
         else:
             print("""error in test 4: /key/test_1 operation should return 
                     {
-                        "success": "true",
-                        "key" : [test_1],
+                        "success": "true", 
                         "content" : file contents
                     }""")
             print("your response: ")
