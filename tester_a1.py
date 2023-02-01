@@ -119,7 +119,7 @@ if test_3_flag_1:
         print("error in test 3-1: your response cannot be represented in JSON format")
 
     try:
-        if jsonResponse["success"] == "true" and jsonResponse["keys"] == ['test_1']:
+        if jsonResponse["success"] == "true" and jsonResponse["key"] == ['test_1']:
             score += 1
         else:
 
@@ -156,7 +156,7 @@ if test_3_flag_2:
         print("error in test 3-2: your response cannot be represented in JSON format")
 
     try:
-        if jsonResponse["success"] == "true" and jsonResponse["keys"] == ['test_2']:
+        if jsonResponse["success"] == "true" and jsonResponse["key"] == ['test_2']:
             score += 1
         else:
 
