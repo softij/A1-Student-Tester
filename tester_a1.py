@@ -83,7 +83,7 @@ if test_2_flag:
             print("""error in test 2: /list_keys operation should return 
                 {
                     "success": "true",
-                    "key": []
+                    "keys": []
                 }""")
             print("your response: ")
             print(jsonResponse)
