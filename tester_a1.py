@@ -66,7 +66,7 @@ test_2_flag = True
 try:
     response = requests.post(url+"/list_keys")
 except:
-    print("error in test 2: could not post /delete_all to your web app")
+    print("error in test 2: could not post /list_keys to your web app")
     print("check the web app connection, IP, port, API endpoint path, etc.")
     test_2_flag = False 
 
@@ -145,7 +145,7 @@ try:
     response = requests.post(url+"/upload", files=file_2,
                        data={'key': 'test_2'})
 except:
-    print("error in test 3-2: could not post /delete_all to your web app")
+    print("error in test 3-2: could not post /upload to your web app")
     print("check the web app connection, IP, port, API endpoint path, etc.")
     test_3_flag_2 = False 
 
