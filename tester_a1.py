@@ -108,7 +108,7 @@ test_3_flag_1 = True
 try:
     response = requests.post(url+"/upload", files=file_1, data={'key': 'test_1'})
 except:
-    print("error in test 3-1: could not post /delete_all to your web app")
+    print("error in test 3-1: could not post /upload to your web app")
     print("check the web app connection, IP, port, API endpoint path, etc.")
     test_3_flag_1 = False 
 
@@ -119,14 +119,14 @@ if test_3_flag_1:
         print("error in test 3-1: your response cannot be represented in JSON format")
 
     try:
-        if jsonResponse["success"] == "true" and jsonResponse["key"] == ['test_1']:
+        if jsonResponse["success"] == "true" and jsonResponse["key"] == "test_1":
             score += 1
         else:
 
             print("""error in test 3-1: /upload operation should return 
                     {
                         "success": "true",
-                        "key": [test_1]
+                        "key": "test_1"
                     }""")
             print("your response: ")
             print(jsonResponse)
@@ -156,14 +156,14 @@ if test_3_flag_2:
         print("error in test 3-2: your response cannot be represented in JSON format")
 
     try:
-        if jsonResponse["success"] == "true" and jsonResponse["key"] == ['test_2']:
+        if jsonResponse["success"] == "true" and jsonResponse["key"] == "test_2":
             score += 1
         else:
 
             print("""error in test 3-2: /upload operation should return 
                     {
                         "success": "true",
-                        "key": [test_2]
+                        "key": "test_2"
                     }""")
             print("your response: ")
             print(jsonResponse)
@@ -192,13 +192,13 @@ if test_4_flag:
     except:
         print("error in test 4: your response cannot be represented in JSON format")
     try: 
-        if jsonResponse["success"] == "true" and jsonResponse["key"] == ['test_1'] and jsonResponse["content"] != None:
+        if jsonResponse["success"] == "true" and jsonResponse["key"] == "test_1" and jsonResponse["content"] != None:
             score += 1
         else:
             print("""error in test 4: /key/test_1 operation should return 
                     {
                         "success": "true", 
-                        "key" : [test_1],
+                        "key" : "test_1",
                         "content" : file contents
                     }""")
             print("your response: ")
